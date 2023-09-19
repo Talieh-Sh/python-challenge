@@ -31,12 +31,6 @@ with open(pybank_csv) as csv_file:
             previous_amount=int(row[1])
             Total_Months+=1
             Total+=int(row[1])
-#    print("Total Month: "+ str(Total_Months))
-#    print("Total : $"+ str(Total))
-#    print("greates increase amount :"+str(greatest_increase_amount))
-#    print("greates increase month :"+str(greatest_increase_month))
-#    print("greates decrease amount :"+str(greatest_decrease_amount))
-#    print("greates decrease month :"+str(greatest_decrease_month))
 #Calculating Average Change 
 with open(pybank_csv) as csv_file:
     csv_reader=csv.reader(csv_file, delimiter=",")
