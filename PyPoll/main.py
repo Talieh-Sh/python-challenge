@@ -45,3 +45,23 @@ with open (pypoll_csv) as csv_file:
     winner=candidate_name_list[candidate_vote_list.index(max_vote)]
     print(f"Winner: {winner}")
     print("-------------------------")
+
+#Define the output path
+output_file=os.path.join("analysis","pypol_results.txt")
+#Save the results to a text file in the analysis folder
+
+with open(output_file,"w") as output:
+    output.write("Election Results\n")
+    output.write("-------------------------\n")
+    for i in range(len(candidate_name_list)):
+        candidate_vote_percentage=(candidate_vote_list[i]/total_votes)*100
+        output.write(f"{candidate_name_list[i]}: {candidate_vote_percentage:0.3f}% ({candidate_vote_list[i]})\n")
+    output.write("-------------------------\n")
+    output.write(f"Winner: {winner}\n")
+    output.write("-------------------------\n")
+# Print a message indicating that the results have been saved
+print("Results have been saved to " + output_file)  
+
+
+
+
