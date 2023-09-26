@@ -54,6 +54,7 @@ with open(pybank_csv) as csv_file:
 
 
 
+
     #Printing the results
     print("Financial Analysis")
     print("----------------------------")
@@ -65,6 +66,21 @@ with open(pybank_csv) as csv_file:
 
 
 
+#Define the output path
+output_file=os.path.join("analysis","pybank_results.txt")
+#Save the results to a text file in the analysis folder
+
+with open(output_file,"w") as output:
+    output.write("Financial Analysis\n")
+    output.write("----------------------------\n")
+    output.write("Total Month: "+ str(Total_Months)+"\n")
+    output.write("Total : $"+ str(Total)+"\n")
+    output.write("Average change: "+str(average_change)+"\n")
+    output.write("Greates increase in profit :" + str(greatest_increase_month) + "($" + str(greatest_increase_amount) + ")\n")
+    output.write("Greates decrease in profit :" + str(greatest_decrease_month) + "($" + str(greatest_decrease_amount) + ")\n")
+
+# Print a message indicating that the results have been saved
+print("Results have been saved to " + output_file)  
 
 
 
