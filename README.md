@@ -1,5 +1,4 @@
-# python-challenge
-## PyBank and PyPoll Analysis
+# PyBank and PyPoll Analysis
 In Repository 2 analysis has been performed
 
   - PyBank: Analysing the financial records of a company using a financial data set called budget_data.csv
